@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+	body {font-family: "Lato", sans-serif;}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#Home {background-color:red;}
+#About {background-color:green;}
+#Apply {background-color:blue;}
+
+#hc {background-color: #80ced6;}
+</style>
+
+</head>
+<body>
+
+
+<div id="Home" class="tabcontent">
+  <h1>Home</h1>
+  <p>Home</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h1>About</h1>
+  <p>About</p> 
+</div>
+
+<div id="Apply" class="tabcontent">
+  <h1>Apply</h1>
+  <p>Apply</p>
+</div>
+
+
+
+<button class="tablink" onclick="openCity('Home', this, 'red')" id="defaultOpen">Home</button>
+
+<button class="tablink" onclick="Applying();")>Apply</button>
+
+<button class="tablink" onclick="AboutUs();")>About</button>
+
+<br><br>
+<br><br>
+<br>
+<br>
+<!-- <img src="img/worker2.png" width="200" height="200">
+<img src="img/worker1.jpg" width="200" height="200"> -->
+<img src="workers.png" width="590" height="500">
+<script type="text/javascript">
+	/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+// Wait for the deviceready event before using any of Cordova's device APIs.
+// See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
+document.addEventListener('deviceready', onDeviceReady, false);
+
+function onDeviceReady() {
+    // Cordova is now initialized. Have fun!
+
+    console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
+    document.getElementById('deviceready').classList.add('ready');
+}
+
+
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+function Applying() {
+	location.href="Apply.html";
+}
+
+function AboutUs() 
+{
+	location.href="About.html";
+}
+</script>
+
+</script>
+  
+</body>
+</html> 
